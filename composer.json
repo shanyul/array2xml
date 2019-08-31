@@ -1,0 +1,24 @@
+{
+    "name": "shanyuliang/array2xml",
+    "description": "Array to Xml tool",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "shanyuliang",
+            "email": "lqy.shanyu@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Shanyuliang\\Array2xml\\": "./src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shanyuliang\\Array2xml\\ServiceProvider"
+            ]
+        }
+    }
+}
