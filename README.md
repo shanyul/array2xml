@@ -6,7 +6,7 @@
 ## Installing
 
 ```shell
-$ composer require shanyuliang/array2xml -vvv
+$ composer require shanyuliang/array2xml
 ```
 
 ## Usage
