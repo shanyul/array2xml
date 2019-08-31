@@ -15,13 +15,13 @@ class Array2xml
      * @var string
      * VERSION
      */
-    protected $version = '1.0';
+    private $version;
 
     /**
      * @var string
      * CHARSET
      */
-    protected $charset = 'utf-8';
+    private $charset;
 
     /**
      * @var array
@@ -35,10 +35,10 @@ class Array2xml
      */
     protected $cdata = [];
 
-    public function __construct($charset = '', $version = '')
+    public function __construct($charset = 'UTF-8', $version = '1.0')
     {
-        $this->version = $version ?: $this->version;
-        $this->charset = $charset ?: $this->charset;
+        $this->version = $version;
+        $this->charset = $charset;
     }
 
     /**

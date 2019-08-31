@@ -131,6 +131,34 @@ result
 }
 ```
 
+Use in Laravel 
+
+```php
+public function getXml(Array2xml $array2xml) 
+{
+    $arr = [
+        'aaa' => [
+            'bbb' => 'ccc',
+            'eee' => 'fff'
+        ]
+    ];
+    $response = $array2xml->generate($arr);
+}
+```
+
+Service Model
+```php
+public function getXml() 
+{
+    $arr = [
+        'aaa' => [
+            'bbb' => 'ccc',
+            'eee' => 'fff'
+        ]
+    ];
+    $response = app('array2xml')->generate($arr);
+}
+```
 
 ## Contributing
 
