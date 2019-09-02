@@ -53,7 +53,7 @@ class Array2xml
         if(empty($data) || !is_array($data)){
             return [
                 'code'  => -1,
-                'error' => '请传入要转换的数组数据',
+                'error' => 'Accept only array data!',
             ];
         }
         $xmlData = [];
@@ -63,10 +63,10 @@ class Array2xml
             $dom = new \DOMDocument($this->version, $this->charset);
             $res =  $this->createData($data, $dom, null);
             if(empty($xmlData = $data = $res->saveXML())){
-                throw new \Exception('生成数据为空');
+                throw new \Exception('Empty');
             }
         }catch (\Exception $e){
-            $error = '生成失败：'. $e->getMessage();
+            $error = 'Failed:'. $e->getMessage();
         }
 
         if(!empty($error)){
